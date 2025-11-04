@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Mithaong</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body
+  style="background-image: url(https://images.unsplash.com/photo-1663198511658-aa642e7f5192?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870);"
+  class="flex justify-center h-screen items-center"
+>
+  <div
+    class="bg-white border px-10 py-8 border-4 border-blue-500 shadow-blue-300 rounded-xl text-center animate__animated animate__pulse animate__backInDown m-8 w-80"
+    id="kartu"
+  >
+    <h1 class="text-2xl">Happy Birthday 🥳</h1>
+    <h1
+      class="text-1xl text-blue-500 font-bold animate__animated animate__pulse animate__infinite">( Mithao )</h1>
+    <button class="p-2 bg-gray-400 text-white rounded mt-5 hover:bg-blue-500 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="ubahKartu()"
+    >Click here...</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+  <script>
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+
+    let kartu = document.getElementById("kartu");
+
+    function ubahKartu() {
+      kartu.innerHTML = `
+        <h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
+          Barakallahu fii umrik. Semoga si sok kuat ini benar-benar kuat karena Allah yang meneguhkan hatinya. Jangan lupa jaga diri ya, jaga kesehatan, makan tepat waktu, dan istirahat yang cukup. Dunia tak pantas menaklukkan org kayak kamu.
+          <br><br>Gpp kalau kadang capek atau pengen berenti bentar. Yang penting jangan nyerah. Terus jalan, pelan juga ndk masalah ~~~ yang penting masih maju 😏😏
+        </h1>
+
+        <h2 class="mt-3 animate__animated animate__fadeIn">
+          - minta maaf cuma bisa buatin km ini, baik-baik ya selalu, tetap jadi diri sendiri 👊👊👊 -
+        </h2>
+
+        <button class="p-2 bg-gray-400 text-white rounded mt-5 hover:bg-blue-500 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+                onclick="tampilFoto()">
+          Baybay wassalamu'alaikum...
+        </button>
+      `;
+    }
+
+    function tampilFoto() {
+      kartu.innerHTML = `
+        <div class="mt-5 animate_animated animate_fadeInUp">
+          <img src="https://raw.githubusercontent.com/abiqo23/Abiqo/28929f63ed0480746d76d7bc0f7a70a94ce7b0b6/mitaho.jpg" alt="Mitha"
+               class="w-48 h-auto rounded-xl animate__animated animate__zoomIn shadow-lg mx-auto mt-3">
+        </div>
+
+        <button class="p-2 bg-blue-500 text-white rounded mt-6 hover:bg-blue-500 transition ease-in w-full animate__animated animate__fadeInUp animate__pulse animate_infinite"
+                onclick="click here()">
+             Mitha, 04 November 2006   
+        </button>
+      `;
+    }
+
+    function refresh() {
+      location.reload();
+    }
+    
+    </script>
+  </body>
+</html>
